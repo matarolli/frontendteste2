@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Diablo IV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Navegação -->
+        <nav>
+            <ul>
+                <li class="logo"><a href="#"><img src="logo.png" alt="Logo do Site"></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Diablo IV</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Mundo</a></li>
+                <!-- Logo na ponta -->
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- Vídeo em loop no fundo -->
+        <video autoplay muted loop>
+            <source src="/assets/video/bagclass.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+        <!-- Logo transparente acima do hero -->
+        <div class="hero-logo">
+            <img src="/assets/img/logoimage.webp" alt="Logo Transparente">
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção O Jogo -->
+        <section id="o-jogo">
+            <h2>O Jogo</h2>
+            <div class="conteudo-o-jogo">
+                <img src="imagem-jogo.png" alt="Imagem do Jogo">
+                <p>Texto sobre o jogo.</p>
+            </div>
+        </section>
+
+        <!-- Seção Classes -->
+        <section id="classes">
+            <h2>Classes</h2>
+            <div class="botoes-classes">
+                <button id="classe1"><img src="classe1.png" alt="Classe 1"></button>
+                <button id="classe2"><img src="classe2.png" alt="Classe 2"></button>
+                <button id="classe3"><img src="classe3.png" alt="Classe 3"></button>
+                <button id="classe4"><img src="classe4.png" alt="Classe 4"></button>
+                <button id="classe5"><img src="classe5.png" alt="Classe 5"></button>
+                <button id="classe6"><img src="classe6.png" alt="Classe 6"></button>
+            </div>
+            <article id="descricao-classe">
+                <!-- Conteúdo dinâmico que muda ao clicar nos botões -->
+                <h3>Nome da Classe</h3>
+                <div class="conteudo-classe">
+                    <img src="imagem-classe.png" alt="Imagem da Classe">
+                    <p>Descrição da classe selecionada.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Seção Mundo -->
+        <section id="mundo">
+            <h2>Mundo</h2>
+            <div class="botoes-mundo">
+                <button id="mundo1"><img src="mundo1.png" alt="Mundo 1"></button>
+                <button id="mundo2"><img src="mundo2.png" alt="Mundo 2"></button>
+                <button id="mundo3"><img src="mundo3.png" alt="Mundo 3"></button>
+                <button id="mundo4"><img src="mundo4.png" alt="Mundo 4"></button>
+                <button id="mundo5"><img src="mundo5.png" alt="Mundo 5"></button>
+            </div>
+            <article id="descricao-mundo">
+                <!-- Conteúdo dinâmico que muda ao clicar nos botões -->
+                <h3>Nome do Mundo</h3>
+                <div class="conteudo-mundo">
+                    <img src="imagem-mundo.png" alt="Imagem do Mundo">
+                    <p>Descrição do mundo selecionado.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Rodapé (opcional) -->
+    <footer>
+        <p>&copy; 2023 Seu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
