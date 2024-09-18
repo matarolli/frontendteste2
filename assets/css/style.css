@@ -7,6 +7,73 @@
     box-sizing: border-box;
 }
 
+/* Aplicação das fontes */
+
+/* assets/css/style.css */
+
+/* Importando as fontes personalizadas */
+@font-face {
+    font-family: 'Old Fenris';
+    src: url('../fonts/OldFenris-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exocet Blizzard';
+    src: url('../fonts/ExocetBlizzardOT-Medium/ExocetBlizzardOT-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Old Fenris', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilizando títulos */
+h1, h2, h3 {
+    font-family: 'Exocet Blizzard', 'Old Fenris', Arial, sans-serif;
+}
+
+/* Outros Navegadores */
+
+@font-face {
+    font-family: 'Old Fenris';
+    src: url('../fonts/OldFenris-Regular.woff2') format('woff2'),
+         url('../fonts/OldFenris-Regular.woff') format('woff'),
+         url('../fonts/OldFenris-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+/* ... */
+
+
+
+
+
+/* Exemplo de uso das fontes */
+body {
+  font-family: var(--font-old-fenris), sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-exocet-blizzard), sans-serif;
+}
+
+
+
 /* Responsividade */
 
 
@@ -61,7 +128,7 @@
     #o-jogo #mundo{
     background-color: #111;
     text-align: center;
-    background-image: url('/assets/img/leather-texture_800.webp');
+    background-image: url('assets/img/leather-texture_800.webp');
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -169,7 +236,7 @@ nav ul li.logo img {
     padding: 80px 20px;
     background-color: #111;
     text-align: center;
-    background-image: url('/assets/img/leather-texture_800.webp');
+    background-image: url('assets/img/leather-texture_800.webp');
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -275,7 +342,7 @@ nav ul li.logo img {
     padding: 80px 20px;
     background-color: #111;
     text-align: center;
-    background-image: url('/assets/img/leather-texture_800.webp');
+    background-image: url('assets/img/leather-texture_800.webp');
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
