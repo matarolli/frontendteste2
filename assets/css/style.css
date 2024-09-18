@@ -133,6 +133,10 @@ h1, h2, h3 {
     background-repeat:no-repeat;
     background-attachment: fixed;
 }
+    .section-divider img,
+    .section-divider-top img {
+        height: 50px; /* Ajuste a altura para telas menores */
+    }
 }
 
 
@@ -213,7 +217,7 @@ nav ul li.logo img {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: -2;
 }
 
 /* Logo transparente acima do hero */
@@ -229,6 +233,50 @@ nav ul li.logo img {
     height: auto;
 }
 
+
+/* Estilos para o divisor de seção */
+.section-divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-divider img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* Se quiser que o divisor se sobreponha à próxima seção */
+.section-divider {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Ajuste a altura conforme necessário */
+    margin-top: -1px; /* Para evitar espaços indesejados */
+}
+
+.section-divider img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+/* Remover margem superior da seção para evitar espaço extra */
+#o-jogo {
+    margin-top: 0;
+}
+
+/* Se necessário, ajuste o posicionamento do divisor */
+.section-divider-top img {
+    position: relative;
+    top: -1px; /* Ajuste conforme necessário */
+}
+
+
+
+
+
+
 /* Estilizando a Seção "O Jogo" */
 
 
@@ -236,7 +284,7 @@ nav ul li.logo img {
     padding: 80px 20px;
     background-color: #111;
     text-align: center;
-    background-image: url('assets/img/leather-texture_800.webp');
+    background-image: url('../img/leather-texture_800.webp');
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -342,7 +390,7 @@ nav ul li.logo img {
     padding: 80px 20px;
     background-color: #111;
     text-align: center;
-    background-image: url('assets/img/leather-texture_800.webp');
+    background-image: url('../img/leather-texture_800.webp');
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
