@@ -12,17 +12,21 @@
     <header>
         <!-- Navegação -->
         <nav>
+            <!-- Checkbox Hack para o menu responsivo -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul>
                 <li class="logo"><a href="#"><img src="assets/img/logoimage.webp" alt="Logo do Site"></a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#o-jogo">Diablo IV</a></li>
                 <li><a href="#classes">Classes</a></li>
-                <li><a href="#mundo">Mundo</a></li>                              
+                <li><a href="#mundo">Mundo</a></li>
             </ul>
         </nav>
     </header>
+    
 
-    <!-- Hero Section -->
+    <!-- Seção Hero -->
     <section id="hero">
         <!-- Vídeo em loop no fundo -->
         <video autoplay muted loop>
@@ -33,9 +37,6 @@
         <div class="hero-logo">
             <img src="assets/img/logoimage.webp" alt="Logo Transparente">
         </div>
-        <div class="section-divider">
-            <img src="assets/img/d4-deco-divider-bottom-003.webp" alt="Divisor Inferior">
-        </div>
     </section>
 
     <!-- Conteúdo Principal -->
@@ -45,8 +46,10 @@
             <h2>Diablo IV</h2>
             <div class="conteudo-o-jogo">
                 <img src="assets/img/d4homepage_thumb.webp" alt="Imagem do Jogo">
-                <p><h3>Hordas infernais - Diablo IV</h3>
-                    As forças demoníacas mais ferozes surgiram em Santuário. Faça o seu retorno ao Inferno para dar o troco. Lute contra hordas demoníacas no novo recurso Hordas Infernais nos Reinos Eterno e de Temporada. Busque novos poderes infernais com mais de 50 itens únicos e lendários diferentes. Encontre seguidores de Lilith, que trazem um alerta sobre o fim iminente de Santuário nas mãos de Mefisto. Obtenha novas recompensas por meio do novo Passe de Batalha, da Jornada de Temporada e de uma nova Progressão de Temporada.</p>
+                <h3>Hordas infernais - Diablo IV</h3>
+                <p>
+                    As forças demoníacas mais ferozes surgiram em Santuário. Faça o seu retorno ao Inferno para dar o troco. Lute contra hordas demoníacas no novo recurso Hordas Infernais nos Reinos Eterno e de Temporada. Busque novos poderes infernais com mais de 50 itens únicos e lendários diferentes. Encontre seguidores de Lilith, que trazem um alerta sobre o fim iminente de Santuário nas mãos de Mefisto. Obtenha novas recompensas por meio do novo Passe de Batalha, da Jornada de Temporada e de uma nova Progressão de Temporada.
+                </p>
             </div>
         </section>
 
@@ -54,21 +57,35 @@
         <section id="classes">
             <h2>Classes</h2>
             <div class="botoes-classes">
-                <button id="classe1"><img src="assets/img/classe_barbaro.webp" alt="Classe 1"></button>
-                <button id="classe2"><img src="assets/img/classe_druida.webp" alt="Classe 2"></button>
-                <button id="classe3"><img src="assets/img/classe_necromancer.webp" alt="Classe 3"></button>
-                <button id="classe4"><img src="assets/img/classe_rogue.webp" alt="Classe 4"></button>
-                <button id="classe5"><img src="assets/img/classe_sorcerer.webp" alt="Classe 5"></button>
-                <button id="classe6"><img src="assets/img/classe_spiritborn.webp" alt="Classe 6"></button>
+                <button class="btn-classe" data-index="0" id="classe1">
+                    <img src="assets/img/classe_barbaro.webp" alt="Bárbaro">
+                </button>
+                <button class="btn-classe" data-index="1" id="classe2">
+                    <img src="assets/img/classe_druida.webp" alt="Druida">
+                </button>
+                <button class="btn-classe" data-index="2" id="classe3">
+                    <img src="assets/img/classe_necromancer.webp" alt="Necromancer">
+                </button>
+                <button class="btn-classe" data-index="3" id="classe4">
+                    <img src="assets/img/classe_rogue.webp" alt="Renegado">
+                </button>
+                <button class="btn-classe" data-index="4" id="classe5">
+                    <img src="assets/img/classe_sorcerer.webp" alt="Feiticeiro">
+                </button>
+                <button class="btn-classe" data-index="5" id="classe6">
+                    <img src="assets/img/classe_spiritborn.webp" alt="Spiritborn">
+                </button>
             </div>
             <article id="descricao-classe">
-                <!-- Conteúdo dinâmico que muda ao clicar nos botões -->
-                <h3>Nome da Classe</h3>
+                <h3>Escolha a classe</h3>
                 <div class="conteudo-classe">
-                    <img src="imagem-classe.png" alt="Imagem da Classe">
-                    <p>Descrição da classe selecionada.</p>
+                    <p>....</p>
+                    <div class="imagem-container">
+                        <img src="assets/img/logoimage.webp" alt="Imagem da Classe">
+                    </div>
                 </div>
             </article>
+            
         </section>
 
         <!-- Seção Mundo -->
@@ -83,18 +100,24 @@
             </div>
             <article id="descricao-mundo">
                 <!-- Conteúdo dinâmico que muda ao clicar nos botões -->
-                <h3>Nome do Mundo</h3>
+                <h3>Descubra o mundo de DIABLO</h3>
                 <div class="conteudo-mundo">
-                    <img src="imagem-mundo.png" alt="Imagem do Mundo">
-                    <p>Descrição do mundo selecionado.</p>
+                    <img src="assets/img/bgclasses.webp" alt="Imagem do Mundo">
+                    <p>O Mundo de Diablo é um reino sombrio e atormentado, onde forças demoníacas e criaturas infernais emergem das profundezas para espalhar caos e destruição. Heróis corajosos se erguem contra a escuridão, explorando terras desoladas e ruínas antigas em busca de poder e conhecimento para enfrentar o mal supremo. Em cada canto, perigos inimagináveis espreitam, e a linha entre a esperança e o desespero é tênue. É um universo de eterna batalha entre o bem e o mal, onde a coragem é testada e lendas são forjadas..</p>
                 </div>
             </article>
         </section>
     </main>
 
-    <!-- Rodapé (opcional) -->
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Diablo IV. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Inclusão da biblioteca Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

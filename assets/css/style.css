@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset básico */
 * {
     margin: 0;
@@ -7,14 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Aplicação das fontes */
-
-/* assets/css/style.css */
-
 /* Importando as fontes personalizadas */
 @font-face {
     font-family: 'Old Fenris';
-    src: url('../fonts/OldFenris-Regular.otf') format('opentype');
+    src: url('../fonts/OldFenris-Regular/OldFenris-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -30,125 +24,16 @@
 
 /* Estilos gerais */
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Old Fenris', Arial, sans-serif;
-    background-color: #000;
     color: #fff;
+    background-color: #000;
+    line-height: 1.6;
 }
 
 /* Estilizando títulos */
 h1, h2, h3 {
     font-family: 'Exocet Blizzard', 'Old Fenris', Arial, sans-serif;
 }
-
-/* Outros Navegadores */
-
-@font-face {
-    font-family: 'Old Fenris';
-    src: url('../fonts/OldFenris-Regular.woff2') format('woff2'),
-         url('../fonts/OldFenris-Regular.woff') format('woff'),
-         url('../fonts/OldFenris-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-
-
-/* ... */
-
-
-
-
-
-/* Exemplo de uso das fontes */
-body {
-  font-family: var(--font-old-fenris), sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-exocet-blizzard), sans-serif;
-}
-
-
-
-/* Responsividade */
-
-
-
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    /* Menu de Navegação */
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    nav ul li.logo {
-        margin-left: 0;
-        align-self: center;
-    }
-
-    /* Seção Hero */
-    #hero {
-        height: 400px;
-    }
-
-    .hero-logo img {
-        width: 200px;
-    }
-
-    /* Tamanhos de Fonte */
-    h2 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 24px;
-    }
-
-    /* Botões */
-    .botoes-classes button, .botoes-mundo button {
-        width: 80px;
-        height: 80px;
-    }
-
-    /* Textos */
-    p {
-        font-size: 16px;
-    }
-
-    #o-jogo #mundo{
-    background-color: #111;
-    text-align: center;
-    background-image: url('assets/img/leather-texture_800.webp');
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-}
-    .section-divider img,
-    .section-divider-top img {
-        height: 50px; /* Ajuste a altura para telas menores */
-    }
-}
-
-
-
-/* Fonte e cor padrão */
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #000;
-}
-
-/* Estilizando o Cabeçalho e a Navegação */
 
 /* Cabeçalho */
 header {
@@ -161,26 +46,24 @@ header {
 
 /* Navegação */
 nav {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
+    position: relative;
 }
+
 nav ul {
+    font-family: 'Exocet Blizzard', 'Old Fenris', Arial, sans-serif;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* Centraliza todos os itens */
     padding: 10px 20px;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin: 0 15px; /* Ajusta as margens para espaçamento uniforme */
 }
 
 nav ul li.logo {
-    margin-left: auto;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -198,13 +81,28 @@ nav ul li.logo img {
     height: 50px;
 }
 
-/* Estilizando a Seção Hero */
+/* Estilos para o menu responsivo */
+nav input[type="checkbox"] {
+    display: none;
+}
 
+nav .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* Seção Hero */
 #hero {
     position: relative;
     width: 100%;
     height: 600px;
     overflow: hidden;
+    margin-top: 80px; /* Para compensar o header fixo */
 }
 
 /* Vídeo de fundo */
@@ -233,71 +131,86 @@ nav ul li.logo img {
     height: auto;
 }
 
-
-/* Estilos para o divisor de seção */
-.section-divider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.section-divider img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-/* Se quiser que o divisor se sobreponha à próxima seção */
-.section-divider {
-    position: relative;
-    width: 100%;
-    height: 50px; /* Ajuste a altura conforme necessário */
-    margin-top: -1px; /* Para evitar espaços indesejados */
-}
-
-.section-divider img {
+/* Divisor entre #hero e #o-jogo */
+#hero::after {
+    content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
-    width: 100%;
-    height: auto;
-}
-/* Remover margem superior da seção para evitar espaço extra */
-#o-jogo {
-    margin-top: 0;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid transparent;
+    border-top: 50px solid #111;
 }
 
-/* Se necessário, ajuste o posicionamento do divisor */
-.section-divider-top img {
+/* Seção O Jogo */
+#o-jogo {
+    margin-top: -50px;
     position: relative;
-    top: -1px; /* Ajuste conforme necessário */
-}
-
-
-
-
-
-
-/* Estilizando a Seção "O Jogo" */
-
-
-#o-jogo {
-    padding: 80px 20px;
+    padding-top: 130px;
+    padding-bottom: 80px;
     background-color: #111;
     text-align: center;
     background-image: url('../img/leather-texture_800.webp');
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-#o-jogo h2 {
+/* Divisor entre #o-jogo e #classes */
+#o-jogo::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid transparent;
+    border-top: 50px solid #000;
+}
+
+/* Seção Classes */
+#classes {
+    margin-top: -50px;
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+/* Divisor entre #classes e #mundo */
+#classes::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid transparent;
+    border-top: 50px solid #111;
+}
+
+/* Estilos dos títulos */
+#o-jogo h2,
+#classes h2,
+#mundo h2 {
     font-size: 36px;
     margin-bottom: 40px;
 }
 
+/* Conteúdo da Seção "O Jogo" */
 .conteudo-o-jogo img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+.conteudo-o-jogo h3 {
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -307,24 +220,6 @@ nav ul li.logo img {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
-}
-
-.conteudo-o-jogo h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-/* Estilizando a Seção "Classes" */
-/* Seção Classes */
-#classes {
-    padding: 80px 20px;
-    background-color: #000;
-    text-align: center;
-}
-
-#classes h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
 }
 
 /* Botões das Classes */
@@ -359,46 +254,84 @@ nav ul li.logo img {
 /* Conteúdo Dinâmico da Classe */
 #descricao-classe {
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 #descricao-classe h3 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
+/* Ajustar o container para alinhar descrição acima da imagem */
 #descricao-classe .conteudo-classe {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#descricao-classe .conteudo-classe img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+    gap: 20px;
 }
 
 #descricao-classe .conteudo-classe p {
-    font-size: 18px;
+    color: #fff;
+    font-size: 20px;
     line-height: 1.6;
+    max-width: 800px;
+    text-align: justify;
+}
+
+#descricao-classe .conteudo-classe .imagem-container {
+    position: relative;
+    width: 100%;
     max-width: 800px;
 }
 
-/* Estilizando a Seção "Mundo" */
+#descricao-classe .conteudo-classe .imagem-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adicionando o degradê abaixo da imagem */
+#descricao-classe .conteudo-classe .imagem-container::after {
+    content: "";
+    position: absolute;
+    bottom: -100%; /* Ajuste conforme necessário */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black, transparent);
+    pointer-events: none;
+}
+
+/* Destaque para o botão selecionado */
+.btn-classe.active {
+    border: 2px solid #fff;
+    opacity: 1;
+}
+
+/* Transição suave no conteúdo */
+#descricao-classe .conteudo-classe {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#descricao-classe .conteudo-classe.fade-out {
+    opacity: 0;
+}
+
 /* Seção Mundo */
 #mundo {
-    padding: 80px 20px;
+    margin-top: -50px;
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 80px;
     background-color: #111;
     text-align: center;
     background-image: url('../img/leather-texture_800.webp');
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-#mundo h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
 }
 
 /* Botões do Mundo */
@@ -444,21 +377,23 @@ nav ul li.logo img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 #descricao-mundo .conteudo-mundo img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgb(70, 5, 10);
 }
 
 #descricao-mundo .conteudo-mundo p {
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
+    text-align: justify;
+    font-family: 'Old Fenris';
 }
 
-/* Estilizando o Rodapé */
 /* Rodapé */
 footer {
     background-color: #000;
@@ -469,4 +404,94 @@ footer {
 
 footer p {
     font-size: 14px;
+    font-family: monospace;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Menu de Navegação */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    /* Exibir o menu quando o checkbox estiver marcado */
+    nav input[type="checkbox"]:checked ~ ul {
+        max-height: 500px; /* Altura suficiente para exibir todos os itens */
+    }
+
+    /* Ocultar o logo dentro do menu em telas pequenas, se desejar */
+    nav ul li.logo {
+        display: none;
+    }
+
+    /* Ajuste do posicionamento do menu */
+    nav {
+        position: relative;
+    }
+
+    /* Seção Hero */
+    #hero {
+        height: 400px;
+    }
+
+    .hero-logo img {
+        width: 200px;
+    }
+
+    /* Tamanhos de Fonte */
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    /* Botões */
+    .botoes-classes button, .botoes-mundo button {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Textos */
+    p {
+        font-size: 16px;
+    }
+
+    /* Ajuste do Divisor em Telas Menores */
+    #hero::after,
+    #o-jogo::after,
+    #classes::after {
+        bottom: -30px;
+        border-top: 30px solid #000; 
+    }
+
+    #o-jogo,
+    #classes,
+    #mundo {
+        margin-top: -30px;
+        padding-top: 110px;
+    }
+
+    /* Ajustes para o conteúdo dinâmico da classe */
+    #descricao-classe .conteudo-classe {
+        gap: 15px;
+    }
 }
